@@ -4,12 +4,34 @@ import axios from "axios";
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/"
 });
-// '/tv/popular'처럼 '/'로 시작하면 절대경로로 가져오기 때문에 안 된다.
-api.get("tv/popular", {
+
+const paramsObj = {
   params: {
     api_key: "9a8525c940f5235964bb5e78513b8720",
     language: "en-US"
   }
-});
+};
 
-export default api;
+export const tvApi = {
+  topRated() {
+    return api.get("tv/top_rated", paramsObj);
+  },
+  popular() {
+    return api.get("tv/popular", paramsObj);
+  },
+  airingToday() {
+    return api.get("tv/airing_today", paramsObj);
+  }
+};
+
+export const movieApi = {
+  nowPlaying() {
+    return api.get("movie/now_playing", paramsObj);
+  },
+  upcoming() {
+    return api.get("movie/upcoming", paramsObj);
+  },
+  popular() {
+    return api.get("movie/popular", paramsObj);
+  }
+};

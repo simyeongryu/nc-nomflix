@@ -11,11 +11,13 @@
 
 ### API Verbs
 
-- [ ] Now Playing (only Movies)
-- [ ] Upcoming (Movies)
-- [ ] Top Rated (TV, Movies)
-- [ ] Popular (TV, Movies)
-- [ ] Airing Today (TV)
+- [x] Now Playing (only Movies)
+- [x] Upcoming (Movies)
+- [x] Top Rated (TV, Movies)
+- [x] Popular (TV, Movies)
+- [x] Airing Today (TV)
+- [ ] TV detail
+- [ ] Movie Detaul
 
 ## 셋업
 
