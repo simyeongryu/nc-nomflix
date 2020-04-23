@@ -9,6 +9,14 @@
 - [ ] Search
 - [ ] Detail
 
+### API Verbs
+
+- [ ] Now Playing (only Movies)
+- [ ] Upcoming (Movies)
+- [ ] Top Rated (TV, Movies)
+- [ ] Popular (TV, Movies)
+- [ ] Airing Today (TV)
+
 ## 셋업
 
 ### .env
@@ -241,21 +249,60 @@ props에 접근 할 수 있다.
 withRouter가 Header라는 컴포넌트를 감싼 형태이기 때문에 Header는 props를 받을 수 있다.
 
 ```js
-export default withRouter(props => (
+// props의 location 속 pathname을 가져와서 그 경로에 따른 style
+export default withRouter(({ location: { pathname } }) => (
   <Header>
     <List>
-      <Item current={false}>
+      <Item current={pathname === "/"}>
         <SLink to="/">Movies</SLink>
       </Item>
-      <Item current={true}>
+      <Item current={pathname === "/tv"}>
         <SLink to="/tv">TV</SLink>
       </Item>
-      <Item current={true}>
+      <Item current={pathname === "/search"}>
         <SLink to="/search">SEARCH</SLink>
       </Item>
     </List>
   </Header>
 ));
 ```
+Link없이 다른 컴포넌트들과 연결할 수 있다.
 
-다른 컴포넌트들과 연결할 수 있다.
+## 4.0 Introduction to The Movie DB API
+
+https://www.themoviedb.org/settings/api
+
+회원가입, 로그인
+
+API key v3 auth 사용
+
+9a8525c940f5235964bb5e78513b8720
+
+## 4.1 Sexy Networking with Axios Instances
+
+```shell
+$ yarn add axios
+```
+
+axios 로 반복되는 부분 처리하면서 fetch 하기
+
+```js
+import axios from "axios";
+// api 호출 시 반복되는 부분들을 한 번에 처리하기 위해
+// instance를 설정해준다.
+const api = axios.create({
+  baseURL: "https://api.themoviedb.org/3/"
+});
+// '/tv/popular'처럼 '/'로 시작하면 절대경로로 가져오기 때문에 안 된다.
+api.get("tv/popular", {
+  params: {
+    api_key: "9a8525c940f5235964bb5e78513b8720",
+    language: "en-US"
+  }
+});
+
+export default api;
+```
+
+
+
