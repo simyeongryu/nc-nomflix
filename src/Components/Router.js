@@ -1,14 +1,18 @@
 import React from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 
 import Home from "Routes/Home";
 import TV from "Routes/TV";
 import Search from "Routes/Search";
 
 export default () => (
-  <HashRouter>
-    <Route exact path="/" component={Home} />
-    <Route path="/tv" component={TV} />
-    <Route path="/search" component={Search} />
-  </HashRouter>
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/tv" component={TV} />
+      <Route path="/search" component={Search} />
+      {/* 위에 지정하지 않은 경로로 접근하면 /으로 이동 */}
+      <Redirect from="*" to="/" />
+    </Switch>
+  </Router>
 );
