@@ -306,5 +306,12 @@ api.get("tv/popular", {
 export default api;
 ```
 
+append_to_response: 해당 영화나 TV show의 예고편 등등을 불러온다.
+
+### 자바스크립트에서 인코딩하기
+```js
+encodeURIComponent(term);
+```
+
 
 

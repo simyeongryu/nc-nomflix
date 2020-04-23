@@ -11,6 +11,7 @@ const paramsObj = {
     language: "en-US"
   }
 };
+const { params: baseParams } = paramsObj;
 
 export const tvApi = {
   topRated() {
@@ -21,6 +22,23 @@ export const tvApi = {
   },
   airingToday() {
     return api.get("tv/airing_today", paramsObj);
+  },
+  detail(id) {
+    return api.get(`tv/${id}`, {
+      params: {
+        ...baseParams,
+        append_to_response: "videos"
+      }
+    });
+  },
+  search(term) {
+    return api.get("search/tv", {
+      params: {
+        ...baseParams,
+        // url에 문자열을 넣기 위해 encoding
+        query: encodeURIComponent(term)
+      }
+    });
   }
 };
 
@@ -33,5 +51,22 @@ export const movieApi = {
   },
   popular() {
     return api.get("movie/popular", paramsObj);
+  },
+  detail(id) {
+    return api.get(`movie/${id}`, {
+      params: {
+        ...baseParams,
+        append_to_response: "videos"
+      }
+    });
+  },
+  search(term) {
+    return api.get("search/movie", {
+      params: {
+        ...baseParams,
+        // url에 문자열을 넣기 위해 encoding
+        query: encodeURIComponent(term)
+      }
+    });
   }
 };
