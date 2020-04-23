@@ -210,3 +210,52 @@ class App extends Component {
   }
 }
 ```
+
+## 3.4 Location Aware Header
+
+스타일 컴포넌트도 컴포넌트여서 props를 전달할 수 있다.
+
+```js
+const Item = styled.li`
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  border-bottom: 5px solid ${props => (props.current ? "#c23616" : "transparent")};
+`;
+```
+```js
+<Item current={true}>
+        <SLink to="/search">SEARCH</SLink>
+      </Item>
+```
+
+withRouter
+```js
+import { Link, withRouter } from "react-router-dom";
+```
+
+컴포넌트를 감싸는 컴포넌트
+
+props에 접근 할 수 있다.
+
+withRouter가 Header라는 컴포넌트를 감싼 형태이기 때문에 Header는 props를 받을 수 있다.
+
+```js
+export default withRouter(props => (
+  <Header>
+    <List>
+      <Item current={false}>
+        <SLink to="/">Movies</SLink>
+      </Item>
+      <Item current={true}>
+        <SLink to="/tv">TV</SLink>
+      </Item>
+      <Item current={true}>
+        <SLink to="/search">SEARCH</SLink>
+      </Item>
+    </List>
+  </Header>
+));
+```
+
+다른 컴포넌트들과 연결할 수 있다.
