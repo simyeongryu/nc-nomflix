@@ -313,5 +313,13 @@ append_to_response: 해당 영화나 TV show의 예고편 등등을 불러온다
 encodeURIComponent(term);
 ```
 
+## 5.0 Container Presenter Pattern part One
 
+컨테이너 프레젠터 패턴
+
+컨테이너는 데이터와 스테이트를 갖고 api를 불러온다.
+
+프리젠터는 스테이트없고 클래스도 없고 api랑도 상관없는 함수형 컴포넌트
+
+프리젠터를 스타일 컨테이너는 데이터?
 
