@@ -23,7 +23,7 @@ export default () => (
       <Route path="/movie/:id" component={Detail} />
       <Route path="/tv/:id" component={Detail} />
       {/* 위에 지정하지 않은 경로로 접근하면 /으로 이동 */}
-      <Redirect from="*" to="/" />
+      <Route to="/" />
     </Switch>
   </Router>
 );
