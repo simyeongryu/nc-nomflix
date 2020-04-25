@@ -47,6 +47,7 @@ export default class extends React.Component {
         // 전체 구문을 ()로 감싼다.
         ({ data: result } = await movieApi.detail(numberId));
       } else if (isTV) {
+        // 위의 구문과 같다.
         const { data } = await tvApi.detail(numberId);
         result = data;
       } else {
@@ -62,7 +63,6 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    console.log(result);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
