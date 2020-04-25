@@ -24,7 +24,8 @@ const Item = styled.li`
   width: 80px;
   height: 50px;
   text-align: center;
-  border-bottom: 3px solid ${props => (props.current ? "#c23616" : "transparent")};
+  border-bottom: 3px solid
+    ${props => (props.current ? "#c23616" : "transparent")};
   transition: border-bottom 0.1s ease-in-out;
 `;
 
@@ -37,6 +38,9 @@ const SLink = styled(Link)`
 `;
 // props의 location 속 pathname을 가져와서 그 경로에 따른 style
 export default withRouter(({ location: { pathname } }) => (
+  // Header는 Route가 아니기 때문에
+  // Router에서 location 정보를 받을 수 없다.
+  // 그래서 withRouter를 사용한다.
   <Header>
     <List>
       <Item current={pathname === "/"}>

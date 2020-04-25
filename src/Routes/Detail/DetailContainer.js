@@ -16,8 +16,7 @@ export default class extends React.Component {
       result: null,
       error: null,
       loading: true,
-      isMovie: pathname.includes("/movie/"),
-      isTV: pathname.includes("/tv/")
+      isMovie: pathname.includes("/movie/")
     };
   }
 
@@ -28,11 +27,10 @@ export default class extends React.Component {
       match: {
         params: { id }
       },
-      history: { push },
-      location: { pathname }
+      history: { push }
     } = this.props;
 
-    const { isMovie, isTV } = this.state;
+    const { isMovie } = this.state;
     const numberId = Number(id);
 
     if (Number.isNaN(numberId)) {
@@ -46,12 +44,10 @@ export default class extends React.Component {
         // let 변수를 활용한 객체 비구조화.
         // 전체 구문을 ()로 감싼다.
         ({ data: result } = await movieApi.detail(numberId));
-      } else if (isTV) {
+      } else {
         // 위의 구문과 같다.
         const { data } = await tvApi.detail(numberId);
         result = data;
-      } else {
-        throw Error("잘못된 상세페이지 url 접근: movie인지 tv인지 알 수 없음.");
       }
     } catch (e) {
       console.log(e);

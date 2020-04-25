@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
+import ErrorMessage from "Components/ErrorMessage";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
   padding: 0 20px;
@@ -16,26 +18,28 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
     <Container>
       {/* ajax의 결과물이 존재하는지 확인 */}
       {nowPlaying && nowPlaying.length > 0 && (
+        // CSS grid를 적용하기 위해 map 에 <span>을 감싸 return
         <Section title="Now Playing">
           {nowPlaying.map(movie => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster />
           ))}
         </Section>
       )}
       {popular && popular.length > 0 && (
         <Section title="Popular Movies">
           {popular.map(movie => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster />
           ))}
         </Section>
       )}
       {upcoming && upcoming.length > 0 && (
         <Section title="Upcoming Movies">
           {upcoming.map(movie => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster />
           ))}
         </Section>
       )}
+      {error && <ErrorMessage text={error} color="#e74c3c" />}
     </Container>
   );
 
