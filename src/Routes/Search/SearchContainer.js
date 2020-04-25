@@ -12,11 +12,20 @@ export default class extends React.Component {
     loading: false
   };
 
-  handleSubmit = () => {
+  handleSubmit = e => {
+    // submit 이벤트 차단
+    e.preventDefault();
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
     }
+  };
+
+  updateTerm = e => {
+    const {
+      target: { value }
+    } = e;
+    this.setState({ searchTerm: value });
   };
 
   searchByTerm = async () => {
@@ -51,6 +60,7 @@ export default class extends React.Component {
         error={error}
         loading={loading}
         handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }
