@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/nc-nomflix/static/js/main.db9c6e9e.chunk.js",
-    "main.js.map": "/nc-nomflix/static/js/main.db9c6e9e.chunk.js.map",
+    "main.js": "/nc-nomflix/static/js/main.75284f3b.chunk.js",
+    "main.js.map": "/nc-nomflix/static/js/main.75284f3b.chunk.js.map",
     "runtime-main.js": "/nc-nomflix/static/js/runtime-main.2bcf0340.js",
     "runtime-main.js.map": "/nc-nomflix/static/js/runtime-main.2bcf0340.js.map",
     "static/js/2.5cd6afd0.chunk.js": "/nc-nomflix/static/js/2.5cd6afd0.chunk.js",
     "static/js/2.5cd6afd0.chunk.js.map": "/nc-nomflix/static/js/2.5cd6afd0.chunk.js.map",
     "index.html": "/nc-nomflix/index.html",
-    "precache-manifest.bf5f848c8512e671c7105780f82253d1.js": "/nc-nomflix/precache-manifest.bf5f848c8512e671c7105780f82253d1.js",
+    "precache-manifest.9008cb0dffcc3cb74a85af046d9f9c00.js": "/nc-nomflix/precache-manifest.9008cb0dffcc3cb74a85af046d9f9c00.js",
     "service-worker.js": "/nc-nomflix/service-worker.js",
     "static/js/2.5cd6afd0.chunk.js.LICENSE.txt": "/nc-nomflix/static/js/2.5cd6afd0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2bcf0340.js",
     "static/js/2.5cd6afd0.chunk.js",
-    "static/js/main.db9c6e9e.chunk.js"
+    "static/js/main.75284f3b.chunk.js"
   ]
 }
