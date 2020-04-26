@@ -325,3 +325,41 @@ page를 표현할 때 데이터 핸들링과 스타일 렌더링을 나눠서 �
 
 page에 해당하는 폴더를 만들고 index를 만들고 컴테이너와 프레젠터를 만든다.
 
+## react-helmet
+
+```shell
+$ yarn add react-helmet
+```
+
+웹사이트의 head를 쉽게 변경할 수 있다.
+
+## code challenges
+
+- [ ] IMDB Link
+- [ ] 디테일에 탭 추가. 유튜브 비디오, 제작회사 등
+- [ ] Collections Link
+
+## github-pages 배포
+
+```shell
+$ yarn add gh-pages
+```
+
+package.json
+
+에 
+
+```json
+"script" :{
+  "deploy": "gh-pages -d build",
+  "predeploy": "yarn run build"
+}
+```
+
+에
+```json
+"homepage" : "simyeong.github.io/projectname"
+```
+
+
+

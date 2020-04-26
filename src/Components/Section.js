@@ -4,9 +4,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   /* 마지막 요소에는 적용 안 함 */
-  :not(:last-child) {
-    margin-bottom: 40px;
-  }
+
+  margin: 30px 10px 30px 10px;
 `;
 
 const Title = styled.span`
