@@ -358,8 +358,16 @@ package.json
 
 에
 ```json
-"homepage" : "simyeong.github.io/projectname"
+"homepage" : "simyeong.github.io/github-project-name"
+```
+```shell
+$ yarn deploy
 ```
 
+BrowserRouter를 사용했다면 Route path 앞에 사이트 URL을 붙여준다
 
+```
+https://simyeong.github.io/github-project-name/RoutePath
+```
 
+아니면 hashRouter를 쓴다.ㅏ
