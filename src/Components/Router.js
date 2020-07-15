@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 
 import Header from "Components/Header";
 
@@ -18,7 +23,7 @@ export default () => (
       <Route path="/movie/:id" component={Detail} />
       <Route path="/tv/:id" component={Detail} />
       {/* 위에 지정하지 않은 경로로 접근하면 /으로 이동 */}
-      <Route to="/" />
+      <Redirect from="*" to="/" />
     </Switch>
   </Router>
 );
