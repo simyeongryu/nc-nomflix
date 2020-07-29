@@ -71,4 +71,20 @@ Not everything is on the videos, research!
 ### 코드
 
 내 코드: https://codesandbox.io/s/day-two-blueprint-4h6kc
-정답 코드: 
+정답 코드: https://codesandbox.io/s/day-two-solution-t0g38
+
+## 3. 
+
+### 문제
+
+https://nomad-coders-assets.s3.amazonaws.com/media/public/django-summernote/2019-08-24/477e2af4-f3ea-42b7-bcdf-acc241b5e727.gif
+
+### 조건
+
+DO NOT create or delete ANY file.
+DO NOT use <a></a>
+IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
+
+### 코드
+
+내 코드 : https://codesandbox.io/s/day-three-blueprint-q28nn
