@@ -88,3 +88,21 @@ IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
 ### 코드
 
 내 코드 : https://codesandbox.io/s/day-three-blueprint-q28nn
+정답코드 : https://codesandbox.io/s/day-three-solution-o4vol
+
+## 4.
+
+### 문제
+
+https://nomad-coders-assets.s3.amazonaws.com/media/public/django-summernote/2019-08-24/129ea34b-01d1-4041-82e7-5a8f4a87064b.gif
+
+### 조건:
+
+Use 'styled-components' , 'styled-reset' and 'createGlobalStyle'
+The header must be location aware and the links should reflect that.
+DO NOT use ANY .css file or 'className' attribute.
+IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
+
+### 코드:
+
+내 코드 : https://codesandbox.io/s/day-four-boilerplate-37frv
