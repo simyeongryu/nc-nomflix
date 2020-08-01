@@ -107,3 +107,33 @@ https://nomad-coders-assets.s3.amazonaws.com/media/public/django-summernote/2019
 
 - 내 코드 : https://codesandbox.io/s/day-four-boilerplate-8rcmj
 - 정답 코드 : https://codesandbox.io/s/day-four-solution-3j7gi
+
+## 5. 
+
+### 문제
+
+https://youtu.be/gBCUJuS5-HU
+
+- Extend the Coin Explorer to call the following API endpoints on the following pages:
+
+- (1) / (Homepage) https://api.coinpaprika.com/v1/tickers
+- (2) /exchanges https://api.coinpaprika.com/v1/exchanges
+- (3) /coins https://api.coinpaprika.com/v1/coins
+- Homepage: Show the name of the coin, the symbol and price.
+- Exchanges: Show the name of the exchange, description and website link.
+- Coins: List the coins and sort them by rank.
+
+### 조건:
+- Use Container/Presenter pattern with class components.
+- DO NOT use Hooks. I know they are awesome, we will use them later.
+- ALL PRESENTERS should use PropTypes.
+- Use PropTypes.shape
+- Use async/await
+- All AJAX requests MUST be made with an AXIOS INSTANCE ('axios.create')
+- Containers MUST NEVER call Axios directly, they should call the instance.
+- Use a Loader Component.
+- IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
+
+### 코드:
+
+- 내 코드: https://codesandbox.io/s/day-five-blueprint-85p2b
