@@ -151,7 +151,7 @@ Extend the Coin Explorer to create a detail view of each coin. You have to make 
 - (2) /coins/{coin_id}/exchanges https://api.coinpaprika.com/v1/coins/{coin_id}/exchanges
 - (3) /coins/{coin_id}/markets https://api.coinpaprika.com/v1/coins/{coin_id}/markets
 
-- Documentation
+- Documentation https://api.coinpaprika.com/?ref=public-apis%20#operation%20/getCoinById
 - Coin Markets & Coin Exchanges: These two ROUTES should be inside of the Coin Detail.
 
 ### 조건:
