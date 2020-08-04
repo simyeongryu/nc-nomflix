@@ -137,3 +137,35 @@ https://youtu.be/gBCUJuS5-HU
 ### 코드:
 
 - 내 코드: https://codesandbox.io/s/day-five-blueprint-85p2b
+- 정답 코드: https://codesandbox.io/s/day-five-solution-xoocs
+
+## 6. 
+
+### 문제 nested Route
+
+https://youtu.be/A7Zn8o-JL5Q
+
+Extend the Coin Explorer to create a detail view of each coin. You have to make the following URLs on your existing app.
+
+- (1) /coins/{coin_id} https://api.coinpaprika.com/v1/coins/{coin_id}
+- (2) /coins/{coin_id}/exchanges https://api.coinpaprika.com/v1/coins/{coin_id}/exchanges
+- (3) /coins/{coin_id}/markets https://api.coinpaprika.com/v1/coins/{coin_id}/markets
+
+- Documentation
+- Coin Markets & Coin Exchanges: These two ROUTES should be inside of the Coin Detail.
+
+### 조건:
+- Use Container/Presenter pattern with class components.
+- DO NOT use Hooks. I know they are awesome, we will use them later.
+- ALL PRESENTERS should use PropTypes.
+- Use PropTypes.shape
+- Use async/await
+- All AJAX requests MUST be made with an AXIOS INSTANCE ('axios.create')
+- Containers MUST NEVER call Axios directly, they should call the instance.
+- Use a Loader Component.
+- Coin Markets and Coin Exchanges should be ROUTES.
+- IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
+
+### 코드:
+
+- 내 코드 : https://codesandbox.io/s/day-five-solution-xkrx0
