@@ -169,3 +169,55 @@ Extend the Coin Explorer to create a detail view of each coin. You have to make 
 ### 코드:
 
 - 내 코드 : https://codesandbox.io/s/day-five-solution-xkrx0
+- 정답 코드 : https://codesandbox.io/s/day-six-solution-6n2q7
+
+## 7.
+
+### 상세 설명
+
+You will have to create the following hooks and use them all in one page:
+
+- useDeviceOrientation
+- useFavicon
+- useGeolocation
+- useKeyPress
+- useLocalStorage
+- useMousePosition
+- useOnline
+- useLockScroll
+
+### 문제
+
+https://youtu.be/o5z6rzzbsGA
+
+### 조건
+
+- useDeviceOrientation:
+- Takes no arguments, returns an object containing "alpha, beta, gamma".
+
+- useFavicon:
+- Takes the initial favicon URL as argument, returns 'setFavicon' that changes the favicon.
+
+- useGeolocation:
+- Take no arguments, returns an object containing 'error, coords: {lat:long}'
+
+- useKeyPress
+- Takes one argument, a key, returns a boolean that becomes 'true' or 'false' if the key is pressed
+
+- useLocalStorage
+- Takes two arguments, the name of the localStorage key, and the initialValue to give to it. Returns an array where the first item is the current element in localStorage and the second item is a function to update localStorage
+
+- useMousePosition:
+- Takes no arguments, returns the x,y coordinates of the mouse.
+
+- useOnline:
+- Takes no arguments, returns a boolean that changes when the user goes online or offline.
+
+- useLockScroll:
+- Takes no arguments, returns an array with two elements. The first element notifies 'true' or 'false' if the scroll is locked, the second element is an object containing two functions, one to lock scroll, one to unlock it.
+
+### 조건:
+- Don't you dare give up!
+- Make a page that uses all the hooks, like the one on the video.
+- IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
+
