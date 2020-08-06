@@ -221,3 +221,6 @@ https://youtu.be/o5z6rzzbsGA
 - Make a page that uses all the hooks, like the one on the video.
 - IF ANY OF THE REQUIREMENTS ARE NOT FULFILLED YOU WILL GET AN ❌
 
+### 코드:
+
+- 내 코드 : https://codesandbox.io/s/day-seven-blueprint-v68pc
